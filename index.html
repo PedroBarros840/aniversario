@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedro & Nara 💘</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fondo corazones -->
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Pantalla PIN -->
+  <section id="lockscreen" class="lockscreen">
+    <div class="card lock-card">
+      <h1>Comprobemos que eres tú Nara</h1>
+      <p class="muted">Introduce el PIN (que dia es hoy)</p>
+
+      <div class="pin-row">
+        <input id="pin" inputmode="numeric" maxlength="4" autocomplete="one-time-code"
+               placeholder="0207" aria-label="PIN de 4 cifras" />
+        <button id="pinBtn" class="btn">Entrar</button>
+      </div>
+
+      <p id="pinError" class="error" role="alert" aria-live="polite"></p>
+      <p class="muted tiny">Temática roja, corazones y mucha cursilería ❤️</p>
+    </div>
+  </section>
+
+  <!-- Web -->
+  <main id="site" class="site hidden">
+    <header class="hero">
+      <div class="hero-inner">
+        <img class="logo" src="assets/logo.png" alt="Logo Pedro & Nara" />
+        <h2>Pedro & Nara</h2>
+        <p class="muted">2 años desde aquella cena en el telepizza xd</p>
+        <a class="btn ghost" href="#timer">Bajar</a>
+      </div>
+    </header>
+
+    <section id="timer" class="section">
+      <div class="card">
+        <h3>⏳ Nuestro contador</h3>
+        <p class="muted">Desde el <b>7 de febrero de 2024</b> a las <b>22:30</b> (Madrid)</p>
+
+        <div class="timer-grid">
+          <div class="timer-box">
+            <div class="timer-num" id="tYears">2</div>
+            <div class="timer-lbl">años</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-num" id="tDays">—</div>
+            <div class="timer-lbl">días</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-num" id="tHours">—</div>
+            <div class="timer-lbl">horas</div>
+          </div>
+          <div class="timer-box">
+            <div class="timer-num" id="tMins">—</div>
+            <div class="timer-lbl">minutos</div>
+          </div>
+        </div>
+
+        <hr class="sep"/>
+
+        <div class="equivs">
+          <div class="equiv">
+            <h4>🚌 Equivale a…</h4>
+            <p><b id="busTrips">—</b> viajes Coruña → Hondarribi en bus</p>
+            <p class="muted tiny">*Duración del viaje configurable en el código.</p>
+          </div>
+
+          <div class="equiv">
+            <h4>🧬 % de vida juntos</h4>
+            <p>Nara: <b id="pctNara">—</b></p>
+            <p>Pedro: <b id="pctPedro">—</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>🎶 Que no se nos olvide el concierto</h3>
+        <p class="muted">Aquí van 6 fotos cuando las hagamos 👇</p>
+
+        <div class="grid photos-6" id="photos6">
+          <!-- placeholders -->
+        </div>
+
+        <p class="muted tiny">*Para poner fotos: subes archivos a /assets y cambias el listado en app.js</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>🧩 Zona de personalización de Nara</h3>
+        <p class="muted">10 huecos para las fotos que tú me digas que ponga 💞</p>
+
+        <div class="grid photos-10" id="photos10">
+          <!-- placeholders -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h3>😊 Estado de ánimo</h3>
+        <p class="muted">Se guarda en este dispositivo. (Ideal para el móvil de cada uno)</p>
+
+        <div class="moods">
+          <div class="mood">
+            <h4>Pedro</h4>
+            <input type="range" min="0" max="4" step="1" id="moodPedro" />
+            <div class="mood-label" id="moodPedroLbl">—</div>
+          </div>
+
+          <div class="mood">
+            <h4>Nara</h4>
+            <input type="range" min="0" max="4" step="1" id="moodNara" />
+            <div class="mood-label" id="moodNaraLbl">—</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Hecho con amor P ❤️ N</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
