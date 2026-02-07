@@ -13,11 +13,13 @@ const BUS_TRIP_MINUTES = 810;
 
 // Fotos: tú las subes a /assets y cambias estos nombres
 const CONCERT_PHOTOS = [
-  null, null, null, null, null, null // 6 huecos
+  "./assets/concert/concert-01.jpg",
+  null, null, null, null, null
 ];
 
 const NARA_CUSTOM_PHOTOS = [
-  null, null, null, null, null, null, null, null, null, null // 10 huecos
+  "./assets/nara/nara-01.jpg",
+  null, null, null, null, null, null, null, null, null
 ];
 
 // ========= Helpers =========
@@ -161,3 +163,4 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTimer();
   setInterval(updateTimer, 1000);
 });
+
